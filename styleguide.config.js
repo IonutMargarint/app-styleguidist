@@ -5,4 +5,9 @@ module.exports = {
     webpackConfig: require('react-scripts-ts/config/webpack.config.dev')
   }
 
+const { createConfig, babel, postcss } = require('webpack-blocks')
+module.exports = {
+  webpackConfig: createConfig([babel(), postcss()])
+}
+
   
